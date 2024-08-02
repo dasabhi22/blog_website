@@ -1,0 +1,324 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color:  rgba(0, 128, 128, 0.8);
+}
+    
+
+
+/* Navigation Styles */
+nav {
+    width: 100%;
+    background: #333;
+    /* display: flex; */
+    /* justify-content: center; */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /* align-items: center; */
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+
+}
+nav::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 8px;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 10px;
+    background: #444;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: rgba(234, 190, 101, 0.902);
+}
+.text-style{
+    color:  rgba(0, 128, 128, 0.8);
+}
+header p {
+    font-size: 1.2em;
+    color: rgba(0, 128, 128, 0.8);;
+}
+#animated-name {
+    display: inline-flex;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    animation: typing 3s steps(11) infinite, blink 0.5s step-end infinite;
+    
+    
+}
+
+@keyframes typing {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 11ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* Main Content Styles */
+.content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    
+    
+}
+
+.content-box {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 75%;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 128, 128, 0.8);
+}
+
+.content-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: rgba(31, 8, 71, 0.747);
+}
+
+
+.content-box p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+.content-box ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content-box ul li {
+    margin-bottom: 10px;
+}
+
+/* Centered Image Styles */
+.center {
+    text-align: center;
+}
+
+.center img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;;
+}
+img:hover{  
+    transform: perspective(100px) translateZ(10px); /* Move slightly z-axis */
+    box-shadow: 0 4px 15px rgba(0, 128, 128, 0.8);
+}
+
+
+
+/* About and Contact Sections */
+#about, #contact {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#about:hover, #contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 128, 128, 0.8);
+}
+
+#contact a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    *{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul {
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .content-box h2 {
+        font-size: 1.5em;
+    }
+
+    .center{
+        width: 100%;
+    }
+  
+}
+
+@media (max-width: 480px) {
+    *{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+  
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .content-box h2 {
+        font-size: 1.3em;
+    }
+    .center{
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    
+}
+iframe {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto; /* Centering the iframe */
+}
+
+iframe:hover {
+    transform: perspective(100px) translateZ(10px); /* Move slightly z-axis */
+    box-shadow: 0 4px 15px rgba(0, 128, 128, 0.8); /* Add shadow effect */
+}
